@@ -1,0 +1,202 @@
+/* Базові налаштування */
+body {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання */
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "SpaceSquare", "sans-serif";
+  font-size: 25px;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("Images/fon.jpg"); /* Задній фон */
+  background-size: cover; /* Зміна розміру фону для покриття всього екрану */
+  background-position: center; /* Центрування фону */
+  text-align: center;
+}
+
+#radar-container {
+  display: flex; /* Використання flexbox для горизонтального вирівнювання */
+  flex-direction: column; /* Вертикальне вирівнювання */
+  align-items: center; /* Центрування елементів по горизонталі */
+  justify-content: center; /* Центрування елементів по вертикалі */
+  width: 80%; /* Встановлення ширини контейнера */
+  max-width: 1000px; /* Максимальна ширина контейнера */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Прозорий фон */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px; /* Відступ від контейнера до нижнього краю */
+  margin-top: 20px;
+}
+
+#radar {
+  width: 200px; /* Збільшена ширина радара */
+  height: 200px; /* Зменшена висота радара для уникнення виходу за межі */
+  border-radius: 50%;
+  border: 3px solid #8d8d8d;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px; /* Відступ між радаром і текстом */
+}
+
+#radar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#message {
+  font-family: "SpaceSquare", "sans-serif";
+  margin-top: 10px; /* Відступ між радаром і текстом */
+  font-size: 1.5em;
+  color: black;
+}
+
+#alert-image {
+  width: 800px; /* Збільшена ширина зображення активності в 2 рази */
+  height: auto; /* Автоматичне регулювання висоти */
+  margin-top: 30px; /* Відступ зверху між текстом і зображенням */
+  margin-bottom: 30px; /* Відступ між зображенням і нижнім краєм */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Тінь для додаткового об'єму */
+}
+
+#image-list {
+  margin-top: 20px; /* Відступ між радом і списком подій */
+  text-align: left; /* Вирівнювання тексту */
+  max-width: 80%; /* Максимальна ширина списку зображень */
+  margin: 0 auto; /* Центрування списку зображень */
+}
+
+#image-list img {
+  width: 100%; /* Зображення займатимуть всю ширину контейнера */
+  border-radius: 10px; /* Заокруглені кути зображень */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тінь для зображень */
+  margin-bottom: 10px; /* Відступ між зображеннями */
+}
+
+#date-range {
+  margin-top: 20px; /* Відступ між радом і формою введення */
+  text-align: center; /* Центрування тексту */
+}
+
+#date-range label {
+  display: block; /* Відображення міток на новому рядку */
+  margin-bottom: 5px; /* Відступ між мітками і полями вводу */
+}
+
+#date-range input {
+  width: 250px; /* Ширина полів вводу */
+  padding: 5px; /* Внутрішній відступ */
+  margin-bottom: 10px; /* Відступ між полями вводу */
+  border-radius: 5px; /* Заокруглені кути */
+  border: 1px solid #ccc; /* Легкий обвод для полів вводу */
+}
+
+#fetch-images {
+  padding: 10px 20px; /* Внутрішні відступи кнопки */
+  background-color: #246430; /* Зелений колір фону кнопки */
+  color: white; /* Колір тексту */
+  border: none; /* Без обводки */
+  border-radius: 5px; /* Заокруглені кути */
+  cursor: pointer; /* Зміна курсору при наведенні */
+  transition: background-color 0.3s; /* Плавна зміна кольору фону */
+  font-family: "SpaceSquare", "sans-serif";
+}
+
+#fetch-images:hover {
+  background-color: #8EC539; /* Темніший зелений при наведенні */
+}
+
+@keyframes radarAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#radar {
+  animation: radarAnimation 4s linear infinite; /* Плавніша анімація */
+}
+
+/* Стилі для інформації про зображення */
+#image-list div {
+  margin-bottom: 5px; /* Відступ між подіями */
+  color: black; /* Колір тексту */
+  font-size: 0.8em; /* Менший розмір шрифту */
+  text-align: center; /* Центрування тексту */
+}
+
+
+
+
+
+/*NEW STYLES*/
+/*HEADER*/
+header {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+/*NEW FONT*/
+@font-face {
+  font-family: "SpaceSquare";
+  src: url("SquareSpaceFont.woff2") format('woff2'),
+       url("SquareSpaceFont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0B0B09;
+  height: 60px;
+  padding: 0px;
+  line-height: 60px;
+  margin: 0px;
+  text-align: center;
+  background-color: #F1F1F1;
+  vertical-align: middle;
+}
+
+/*MAIN BLOCK*/
+main{
+  display: flex; /* Використання flexbox для горизонтального вирівнювання */
+  flex-direction: column; /* Вертикальне вирівнювання */
+  align-items: center; /* Центрування елементів по горизонталі */
+  justify-content: center; /* Центрування елементів по вертикалі */
+  width: 80%; /* Встановлення ширини контейнера */
+  max-width: 1000px; /* Максимальна ширина контейнера */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Прозорий фон */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  max-width: 1000px;
+  height: 100%;
+  color: black;
+}
+
+.enter {
+  height: 20px;
+}

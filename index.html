@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" data-lt-installed="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seismic activity analyzer</title>
+<!--Icon-->
+  <link rel="shortcut icon" href="Images\icon.png" type="image/png">
+<!--Connect CSS-->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<!--Connect JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<!--SITE HEADER-->
+  <header>Seismic activity analyzer</header>
+
+  <div id="radar-container">
+    <div id="radar">
+      <img id="radar-image" src="img/green.jpg" alt="Радар">
+    </div>
+    <div id="message">No abnormal activity detected</div>
+    <img id="alert-image" src="" alt="Алерт" style="display: none; margin-top: 20px;">
+  </div>
+
+  <!-- Форма для введення діапазону дат -->
+  <main>
+  <div id="date-range">
+    <label for="start-time">Enter start date:</label>
+    <input type="date" id="start-time" placeholder="">
+    
+    <label for="end-time">Enter end date:</label>
+    <input type="date" id="end-time" placeholder="">
+    <p></p>
+    <button id="fetch-images">A N A L Y S E</button>
+  </div>
+
+  <div class="enter"></div>
+
+  <div id="image-list"></div> <!-- Контейнер для відображення подій -->
+  
+  <script src="script.js"></script>
+  </main>
+</body>
+<!--FOOTER-->
+<footer>
+  <div class="footer">© 2024 - sudo reboot </div>
+</footer>
+</html>
